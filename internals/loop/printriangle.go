@@ -8,7 +8,6 @@ import (
 
 func PrintTriangle(scanner *bufio.Scanner) {
 	fmt.Print("Masukkan tinggi segitiga: ")
-
 	scanner.Scan()
 	input := scanner.Text()
 
