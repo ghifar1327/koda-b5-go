@@ -7,30 +7,6 @@ import (
 )
 
 func GetProfile(scanner *bufio.Scanner) {
-	// person := profile{
-	// 	name:         "Muhammad Ghifar Ramdhani",
-	// 	img:          "picture.jpg",
-	// 	email:        "givartorreto@gamil.com",
-	// 	age:          26,
-	// 	phone_number: +6285591710309,
-	// 	isMarrid:     false,
-	// 	education: []education{
-	// 		{
-	// 			name:     "SDN Bayur Kidul 1",
-	// 			isPassed: true,
-	// 		},
-	// 		{
-	// 			name:     "SMPN 1 Karawang Timur",
-	// 			isPassed: true,
-	// 		},
-	// 		{
-	// 			name:     "SMAN 2 Karawang",
-	// 			isPassed: true,
-	// 		},
-	// 	},
-	// }
-	// // fmt.Println(person)
-	// fmt.Printf("nama : %s\nimg : %s\nalamat email : %s\numur : %d\nno telepon : %d\nstatus pernikahan : %v\npendidikan %v", person.name, person.img,person.email, person.age,person.phone_number,person.isMarrid, person.education)
 
 	var person profile
 

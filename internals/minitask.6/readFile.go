@@ -1,21 +1,26 @@
 package minitask6
 
 import (
-	// "bufio"
 	"fmt"
 	"os"
 )
 
-func FileReader(){
-file, err := os.Open("file.txt")
+func FileReader() {
+	func ()  {
+		if r := recover(); r != nil{
+			fmt.Printf("recoveri panic %v", r)
+		}
+	}()
+	file, err := os.Open("file.txt")
 	if err != nil {
-		fmt.Println("Error:", err)
-		return
-	}else{
-		result := fmt.Sprintf("file %v", file)
-		println(result)
+		panic("Error:")
 	}
-	// defer file.Close()
+	defer file.Close()
+	
+	data, err := os.ReadFile("file.txt")
+	if err != nil {
+		panic("Error membaca file")
+	}
 
-	// fmt.Println("File berhasil dibuka:", file.Name())
+	fmt.Println(string(data))
 }

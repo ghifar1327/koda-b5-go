@@ -1,17 +1,33 @@
 package method
 
-type person struct{
-	name  string
-	address string
-	phone string  
+import "fmt"
+
+type Person struct {
+	Name    string
+	Address string
+	Phone   string
 }
 
-func NewPerson(name string, address string ,phone string) *person{
-	return &person{
-		name : name,
-		address : address,
-		phone : phone,
+// Constructor
+func NewPerson(name, address, phone string) *Person {
+	return &Person{
+		Name:    name,
+		Address: address,
+		Phone:   phone,
 	}
 }
 
-// func (p *person)
+// Method Print
+func (p Person) PrintMethod()string{
+	return fmt.Sprintf("Name: %s\n Address: %s\n Phone: %s\n", p.Name, p.Address, p.Phone)
+}
+
+// Method Greet
+func (p Person) Greet() string {
+	return fmt.Sprintf("Hello, my name is %s!", p.Name)
+}
+
+// Setter Name
+func (p *Person) SetName(name string) {
+	p.Name = name
+}
