@@ -6,6 +6,8 @@ import (
 	"os"
 	"strings"
 
+	"github.com/ghifar1327/koda-b5-go/internals/channel"
+	"github.com/ghifar1327/koda-b5-go/internals/goroutine"
 	lingkaran "github.com/ghifar1327/koda-b5-go/internals/ligkaran"
 	"github.com/ghifar1327/koda-b5-go/internals/loop"
 	"github.com/ghifar1327/koda-b5-go/internals/method"
@@ -27,6 +29,8 @@ func GoBufio() {
 		fmt.Println("5. Buka file")
 		fmt.Println("6. Data person 'method'")
 		fmt.Println("7. Cashier")
+		fmt.Println("8. Rutinitas pagi")
+		fmt.Println("9. Black Board 'channel'")
 		fmt.Println("0. Exit")
 		fmt.Print("Pilih menu: ")
 
@@ -48,6 +52,10 @@ func GoBufio() {
 			method.GetPerson(scanner)
 		case "7":
 			payments.Cashier(scanner)
+		case "8":
+			goroutine.Rutinitas()
+		case "9":
+			channel.Main()
 		case "0":
 			fmt.Println("Keluar dari program")
 			return
